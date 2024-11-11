@@ -12,10 +12,10 @@ const useUploadImages = () => {
 
     const files = Array.from(event.target.files);
 
-    convertToBase64(files);
+    convertAndSaveToBase64(files);
   };
 
-  const convertToBase64 = (files: File[]) => {
+  const convertAndSaveToBase64 = (files: File[]) => {
     files.forEach((file) => {
       const reader = new FileReader();
 

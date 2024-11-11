@@ -18,6 +18,7 @@ export interface IAppActions {
   setImage: (image: IImage) => void;
   updateImage: (id: string, image: Partial<IImage>) => void;
   setActiveImageId: (id: string) => void;
+  deleteImage: (id: string) => void;
   clearImages: () => void;
 }
 
@@ -50,6 +51,13 @@ export const useAppStore = create(
         setActiveImageId: (id) => {
           set((state) => {
             state.activeImageId = id;
+          });
+        },
+
+        deleteImage: (id) => {
+          set((state) => {
+            state.images = state.images.filter((i) => i.id !== id);
+            state.activeImageId = "";
           });
         },
 

@@ -4,8 +4,4 @@
 
 Everything will happen locally.
 
-TODO:
-- Refactor code. Split into components. Optimize some parts.
-- Add possibility to delete only selected image, if it was uploaded by mistake.
-
 Disclaimer: Please note that this project is for demonstrational and educational purposes only.
